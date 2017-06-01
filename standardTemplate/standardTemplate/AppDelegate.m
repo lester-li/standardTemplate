@@ -20,6 +20,7 @@
     NSLog(@"这是一个美好的午后");
     NSLog(@"ignore files test");
     NSLog(@"");
+    NSLog(@"");
     return YES;
 }
 
