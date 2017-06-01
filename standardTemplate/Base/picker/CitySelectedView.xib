@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CitySelectedView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhm-ak-WR1">
+                    <rect key="frame" x="0.0" y="427" width="375" height="240"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9dJ-NV-Lmc">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0b-Ff-Hp6">
+                                    <rect key="frame" x="285" y="0.0" width="80" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="80" id="Ejo-4A-QIL"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <state key="normal" title="完成">
+                                        <color key="titleColor" red="0.70588235290000001" green="0.52549019610000003" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="FinishBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="ymo-4b-sjJ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IG0-ML-ceS">
+                                    <rect key="frame" x="10" y="0.0" width="80" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="80" id="E7A-6A-pKx"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <state key="normal" title=" 取消">
+                                        <color key="titleColor" red="0.70588235290000001" green="0.52549019610000003" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="CancleBtnclick:" destination="iN0-l3-epB" eventType="touchUpInside" id="r30-9X-hgh"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="IG0-ML-ceS" secondAttribute="bottom" id="8vZ-cW-Vh0"/>
+                                <constraint firstAttribute="height" constant="40" id="KRa-hu-3xp"/>
+                                <constraint firstItem="IG0-ML-ceS" firstAttribute="leading" secondItem="9dJ-NV-Lmc" secondAttribute="leading" constant="10" id="Pb8-TM-Gy7"/>
+                                <constraint firstItem="IG0-ML-ceS" firstAttribute="top" secondItem="9dJ-NV-Lmc" secondAttribute="top" id="XCb-OR-iIh"/>
+                                <constraint firstAttribute="trailing" secondItem="P0b-Ff-Hp6" secondAttribute="trailing" constant="10" id="dTd-Qc-gbv"/>
+                                <constraint firstItem="P0b-Ff-Hp6" firstAttribute="top" secondItem="9dJ-NV-Lmc" secondAttribute="top" id="g5f-tF-eO2"/>
+                                <constraint firstAttribute="bottom" secondItem="P0b-Ff-Hp6" secondAttribute="bottom" id="seK-GH-aGp"/>
+                            </constraints>
+                        </view>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YiE-VM-i2i">
+                            <rect key="frame" x="0.0" y="40" width="375" height="200"/>
+                        </pickerView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="YiE-VM-i2i" firstAttribute="top" secondItem="9dJ-NV-Lmc" secondAttribute="bottom" id="2wT-BN-FGs"/>
+                        <constraint firstItem="YiE-VM-i2i" firstAttribute="leading" secondItem="lhm-ak-WR1" secondAttribute="leading" id="4Us-bM-pO2"/>
+                        <constraint firstItem="9dJ-NV-Lmc" firstAttribute="leading" secondItem="lhm-ak-WR1" secondAttribute="leading" id="IOT-aG-OMT"/>
+                        <constraint firstItem="9dJ-NV-Lmc" firstAttribute="top" secondItem="lhm-ak-WR1" secondAttribute="top" id="MrP-wo-j6t"/>
+                        <constraint firstAttribute="bottom" secondItem="YiE-VM-i2i" secondAttribute="bottom" id="QLL-iY-3RM"/>
+                        <constraint firstAttribute="trailing" secondItem="YiE-VM-i2i" secondAttribute="trailing" id="U2I-2I-TR1"/>
+                        <constraint firstItem="YiE-VM-i2i" firstAttribute="top" secondItem="9dJ-NV-Lmc" secondAttribute="bottom" id="U4C-Qa-l6n"/>
+                        <constraint firstAttribute="trailing" secondItem="9dJ-NV-Lmc" secondAttribute="trailing" id="WYc-GR-O01"/>
+                        <constraint firstAttribute="height" constant="240" id="iWg-Ff-pWS"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="240" id="pf9-Kh-cv5"/>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="240" id="uxW-Wg-TIf"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="U4C-Qa-l6n"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkH-Ep-WIB">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="427"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.50390625" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jkH-Ep-WIB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2bj-dT-9L7"/>
+                <constraint firstItem="lhm-ak-WR1" firstAttribute="top" secondItem="jkH-Ep-WIB" secondAttribute="bottom" id="6h6-sO-GBI"/>
+                <constraint firstItem="jkH-Ep-WIB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HLa-xB-ZA3"/>
+                <constraint firstItem="lhm-ak-WR1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QiP-Xd-uUX"/>
+                <constraint firstAttribute="bottom" secondItem="lhm-ak-WR1" secondAttribute="bottom" id="X2v-K4-47V"/>
+                <constraint firstAttribute="trailing" secondItem="jkH-Ep-WIB" secondAttribute="trailing" id="cUy-l6-L0c"/>
+                <constraint firstItem="lhm-ak-WR1" firstAttribute="top" secondItem="jkH-Ep-WIB" secondAttribute="bottom" id="iMM-sX-XHl"/>
+                <constraint firstAttribute="trailing" secondItem="lhm-ak-WR1" secondAttribute="trailing" id="vwf-d2-rZk"/>
+            </constraints>
+            <connections>
+                <outlet property="CityPickerView" destination="YiE-VM-i2i" id="Ypq-n4-qDa"/>
+                <outlet property="CorverView" destination="jkH-Ep-WIB" id="iqy-cP-Ars"/>
+            </connections>
+        </view>
+    </objects>
+</document>
