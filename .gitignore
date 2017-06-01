@@ -19,7 +19,7 @@ DerivedData
 *.xccheckout
 *.xcworkspace
 !default.xcworkspace
-
+UserInterfaceState.xcuserstate
 #CocoaPods
 Pods
 !Podfile
