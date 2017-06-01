@@ -18,6 +18,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     NSLog(@"这是一个美好的午后");
+    NSLog(@"这是一个美好的午后");
+
     return YES;
 }
 
