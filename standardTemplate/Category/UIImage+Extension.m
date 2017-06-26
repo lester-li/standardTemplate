@@ -24,25 +24,25 @@
 }
 
 // 视频第一帧
-+ (UIImage *)videoFramerateWithPath:(NSString *)videoPath
-{
-    NSString *mp4Path = [[videoPath stringByDeletingPathExtension] stringByAppendingPathExtension:@"mp4"];
-    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:[NSURL fileURLWithPath:mp4Path] options:nil];
-    NSParameterAssert(asset);
-    AVAssetImageGenerator *assetImageGenerator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
-    assetImageGenerator.appliesPreferredTrackTransform = YES;
-    assetImageGenerator.apertureMode = AVAssetImageGeneratorApertureModeEncodedPixels;
-    CGImageRef thumbnailImageRef = NULL;
-    CFTimeInterval thumbnailImageTime = 0;
-    NSError *thumbnailImageGenerationError = nil;
-    thumbnailImageRef = [assetImageGenerator copyCGImageAtTime:CMTimeMake(thumbnailImageTime, 60) actualTime:NULL error:&thumbnailImageGenerationError];
-    if (!thumbnailImageRef) {
-        return nil;
-    }
-    UIImage *thumbnailImage = thumbnailImageRef ? [[UIImage alloc] initWithCGImage:thumbnailImageRef] : nil;
-    CGImageRelease(thumbnailImageRef);
-    return thumbnailImage;
-}
+//+ (UIImage *)videoFramerateWithPath:(NSString *)videoPath
+//{
+//    NSString *mp4Path = [[videoPath stringByDeletingPathExtension] stringByAppendingPathExtension:@"mp4"];
+//    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:[NSURL fileURLWithPath:mp4Path] options:nil];
+//    NSParameterAssert(asset);
+//    AVAssetImageGenerator *assetImageGenerator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+//    assetImageGenerator.appliesPreferredTrackTransform = YES;
+//    assetImageGenerator.apertureMode = AVAssetImageGeneratorApertureModeEncodedPixels;
+//    CGImageRef thumbnailImageRef = NULL;
+//    CFTimeInterval thumbnailImageTime = 0;
+//    NSError *thumbnailImageGenerationError = nil;
+//    thumbnailImageRef = [assetImageGenerator copyCGImageAtTime:CMTimeMake(thumbnailImageTime, 60) actualTime:NULL error:&thumbnailImageGenerationError];
+//    if (!thumbnailImageRef) {
+//        return nil;
+//    }
+//    UIImage *thumbnailImage = thumbnailImageRef ? [[UIImage alloc] initWithCGImage:thumbnailImageRef] : nil;
+//    CGImageRelease(thumbnailImageRef);
+//    return thumbnailImage;
+//}
 
 // 压缩图片
 + (UIImage *)simpleImage:(UIImage *)originImg

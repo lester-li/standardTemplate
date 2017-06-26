@@ -1,0 +1,25 @@
+//
+//  AppDelegate.pch
+//  standardTemplate
+//
+//  Created by 李小帅 on 2017/6/23.
+//  Copyright © 2017年 美好午后. All rights reserved.
+//
+
+#ifndef AppDelegate_pch
+#define AppDelegate_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef DEBUG
+#define ICLog(format, ...)    NSLog(format, ##__VA_ARGS__)
+#else
+#define ICLog(format, ...)
+#endif
+
+#import "AllInterfaceHeader.h"
+#import "OtherInterface.h"
+
+
+#endif /* AppDelegate_pch */

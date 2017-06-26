@@ -7,12 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FriendModel.h"
 
 //将好友的基本信息保存在本地
 @interface SaveFriendsInfoTool : NSObject
 
-+ (void)saveFriendModel:(FriendModel *)frinendModel;
+
 
 + (NSMutableArray*)getFriendModelArray;
 

@@ -17,7 +17,7 @@
         self.dataSource =del;
         self.delegate = del;
         self.separatorStyle = UITableViewCellSeparatorStyleNone;
-        self.backgroundColor = colorOf_Clean;
+//        self.backgroundColor = colorOf_Clean;
         self.showsVerticalScrollIndicator = NO;
         //    // 下拉刷新
         //    self.tableView.mj_header= [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerRereshing)];
